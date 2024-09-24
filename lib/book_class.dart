@@ -2,25 +2,21 @@ class Book {
   String title;
   String author;
   int publicationYear;
-  int pagesRead = 0;
+  int pagesRead;
 
   // static total book create track
   static int totalBooks = 0;
 
   // Constructor for all properties;
-  Book(
-      this.title,
-      this.author,
-      this.publicationYear,
-      ) {
+  Book(this.title, this.author, this.publicationYear, {this.pagesRead = 0}) {
     totalBooks++;
   }
-  // number of page read method
+  // number of page read method()
   void read(int pages) {
     pagesRead += pages;
   }
 
-  // get method
+  // getMethod() for fetching information
   int getPagesRead() => pagesRead;
   String getTitle() => title;
   String getAuthor() => author;
@@ -30,4 +26,3 @@ class Book {
     return currentYear - publicationYear;
   }
 }
-
