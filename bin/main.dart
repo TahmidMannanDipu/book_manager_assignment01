@@ -24,7 +24,8 @@ void main() {
 
   //print all books information
   for (var book in books) {
-    print(""" Book Title: ${book.getTitle()}
+    print("""
+    Book Title: ${book.getTitle()}
     Book author : ${book.getAuthor()}
     Publication year: ${book.getPublicationYear()}
     Number of pages read: ${book.getPagesRead()}
