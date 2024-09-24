@@ -13,8 +13,13 @@ class Book {
   }
   // number of page read method()
   void read(int pages) {
-    pagesRead += pages;
+    if (pages > 0) {
+      pagesRead += pages;
+    } else {
+      print('Invalid number of pages');
+    }
   }
+
 
   // getMethod() for fetching information
   int getPagesRead() => pagesRead;
